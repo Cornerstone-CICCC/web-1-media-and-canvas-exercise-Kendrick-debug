@@ -1,0 +1,43 @@
+*{
+    margin: auto;
+}
+
+body{
+    background-image: url(assets/images/background.jpg);
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-color: green;
+    background-size: cover;
+}
+.container{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.audio-file{
+    position: relative;
+
+}
+
+.video{
+    position: relative;
+
+}
+
+img{
+    width: 600px;
+    margin-top: 10px;
+
+}
+
+#myCanvas{
+    background-color: yellow;
+    width: 500px;
+    height: 500px;
+
+}
+

@@ -4,16 +4,72 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Media Exercise</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
     <!-- AUDIO HTML GOES HERE -->
+     <audio class="audio-file" controls muted loop>
+      <source src="assets/audio/piano.wav" type="audio/wav">
+      <source src="assets/audio/piano.mp3" type="audio/mp3">
+      <p>Your Brower does not support this audio element</p>
+     </audio>
 
     <!-- VIDEO HTML GOES HERE -->
+     <video class="video" width="900" height="900" controls muted poster="assets/images/poster.jpg">
+      <source src="assets/video/ocean.mp4" type="video/mp4">
+      <source src="assets/video/ocean.ogg" type="video/ogg">
+      <p>This brower does not support  the video tag</p>
+     </video>
+
 
     <!-- IMAGE MAP HTML GOES HERE-->
+     <img src="assets/images/fruit_table.jpg" usemap="#fruits_map" title="Fruits Table" alt="fruit-table-image">
+     <map id="fruits_map">
+      <area shape="rect" coords="35,44,270,350" href="https://en.wikipedia.org/wiki/Lavandula" title="Lavander" alt="Lavander">
+      <area shape="rect" coords="300,330,680,550" href="https://en.wikipedia.org/wiki/Orange_(fruit)" title="Orange" alt="Orange">
+      <area shape="circle" coords="300,150,200" href="https://en.wikipedia.org/wiki/Coffee" title="Coffee" alt="Coffee">
+     </map>
 
     <!-- CANVAS HTML GOES HERE -->
+     <canvas id="myCanvas" width="500" height="500"></canvas>
+     <script>
+      const canvas = document.querySelector('#myCanvas');
+      const context = canvas.getContext('2d');
+
+      context.beginPath();
+      context.moveTo(100, 150);
+      context.lineTo(100, 400);
+      context.strokeStyle = "red";
+      context.lineWidth = 5;
+      context.stroke();
+
+      context.beginPath();
+      context.moveTo(400, 400);
+      context.lineTo(100, 400);
+      context.strokeStyle = "blue";
+      context.lineWidth = 5;
+      context.stroke();
+
+      context.beginPath();
+      context.moveTo(400, 400);
+      context.lineTo(400, 150);
+      context.strokeStyle = "black";
+      context.lineWidth = 5;
+      context.stroke();
+
+
+      context.beginPath();
+      context.moveTo(400, 150);
+      context.lineTo(100, 150);
+      context.strokeStyle = "violet";
+      context.lineWidth = 5;
+      context.stroke();
+
+
+
+     </script>
+
   </div>
 
   <script>
